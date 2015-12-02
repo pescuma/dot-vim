@@ -1,0 +1,42 @@
+set vsvim_useeditordefaults
+
+nnoremap <C-O> :vsc ReSharper.ReSharper_NavigateBackward<CR>
+nnoremap <C-I> :vsc ReSharper.ReSharper_NavigateForward<CR>
+
+" Refactors
+nnoremap crr :vsc ReSharper.ReSharper_Rename<CR>
+nnoremap cro :vsc ReSharper.ReSharper_Move<CR>
+nnoremap crd :vsc ReSharper.ReSharper_SafeDelete<CR>
+vnoremap crm :vsc ReSharper.ReSharper_ExtractMethod<CR>
+nnoremap crv :vsc ReSharper.ReSharper_IntroVariable<CR>
+vnoremap crv :vsc ReSharper.ReSharper_IntroVariable<CR>
+nnoremap crf :vsc ReSharper.ReSharper_IntroduceField<CR>
+nnoremap crp :vsc ReSharper.ReSharper_IntroParameter<CR>
+nnoremap cri :vsc ReSharper.ReSharper_InlineVariable<CR>
+nnoremap crs :vsc ReSharper.ReSharper_ChangeSignature<CR>
+
+" Explore
+nnoremap g] :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+nnoremap gi :vsc ReSharper.ReSharper_GotoImplementation<CR>
+nnoremap gk :vsc ReSharper.ReSharper_GotoBase<CR>
+nnoremap gj :vsc ReSharper.ReSharper_GotoInheritors<CR>
+
+nnoremap gr :vsc ReSharper.ReSharper_GotoUsage<CR>
+
+nnoremap gnr :vsc ReSharper.ReSharper_ResultListGoToNextLocation<CR>
+nnoremap gpn :vsc ReSharper.ReSharper_ResultListGoToPrevLocation<CR>
+nnoremap gne :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
+nnoremap gpe :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
+nnoremap gnh :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
+nnoremap gph :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
+
+nnoremap g[ :vsc ReSharper.ReSharper_GotoContainingDeclaration<CR>
+
+nnoremap gt :vsc ReSharper.ReSharper_GotoType<CR>
+nnoremap gf :vsc ReSharper.ReSharper_GotoFile<CR>
+nnoremap gs :vsc ReSharper.ReSharper_GotoSymbol<CR>
+
+" Tests
+nnoremap zud :vsc ReSharper.ReSharper_UnitTestDebugContext<CR>
+nnoremap zur :vsc ReSharper.ReSharper_UnitTestRunContext<CR>
+nnoremap zu :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
