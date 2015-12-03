@@ -41,4 +41,4 @@ nnoremap gm :vsc ReSharper.ReSharper_GotoFileMember<CR>
 " Tests
 nnoremap zud :vsc ReSharper.ReSharper_UnitTestDebugContext<CR>
 nnoremap zur :vsc ReSharper.ReSharper_UnitTestRunContext<CR>
-nnoremap zu :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
+nnoremap zuu :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
