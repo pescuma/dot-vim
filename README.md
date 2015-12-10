@@ -2,4 +2,4 @@
 
 My vim configuration.
 
-To be used with [dotfiles](https://github.com/pescuma/dotfiles).
+To be used with [dotcastles](https://github.com/pescuma/dotcastles).
