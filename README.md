@@ -1,4 +1,4 @@
-# dot-vsvimrc
+# dot-vim
 
 My vim configuration.
 
