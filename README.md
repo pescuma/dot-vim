@@ -1,3 +1,5 @@
 # dot-vsvimrc
 
-To be used with homesick.
+My vim configuration.
+
+To be used with [dotfiles](https://github.com/pescuma/dotfiles).
