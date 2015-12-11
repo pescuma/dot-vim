@@ -9,7 +9,9 @@ nnoremap <C-I> :vsc ReSharper.ReSharper_NavigateForward<CR>
 nnoremap crr :vsc ReSharper.ReSharper_Rename<CR>
 nnoremap cro :vsc ReSharper.ReSharper_Move<CR>
 nnoremap crd :vsc ReSharper.ReSharper_SafeDelete<CR>
+nnoremap crm :vsc ReSharper.ReSharper_ExtractMethod<CR>
 vnoremap crm :vsc ReSharper.ReSharper_ExtractMethod<CR>
+nnoremap crv :vsc ReSharper.ReSharper_IntroVariable<CR>
 vnoremap crv :vsc ReSharper.ReSharper_IntroVariable<CR>
 nnoremap crf :vsc ReSharper.ReSharper_IntroduceField<CR>
 nnoremap crp :vsc ReSharper.ReSharper_IntroParameter<CR>
@@ -29,10 +31,15 @@ nnoremap ]q :vsc ReSharper.ReSharper_ResultListGoToNextLocation<CR>
 nnoremap [q :vsc ReSharper.ReSharper_ResultListGoToPrevLocation<CR>
 nnoremap ]e :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
 nnoremap [e :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
+nnoremap ]E :vsc View.NextError<CR>
+nnoremap [E :vsc View.PreviousError<CR>
 nnoremap ]h :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
 nnoremap [h :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
 nnoremap ]m :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+vnoremap ]m :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 nnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+vnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+
 
 nnoremap g[ :vsc ReSharper.ReSharper_GotoContainingDeclaration<CR>
 
@@ -44,13 +51,18 @@ nnoremap gm :vsc ReSharper.ReSharper_GotoFileMember<CR>
 
 " Tests
 nnoremap zud :vsc ReSharper.ReSharper_UnitTestDebugContext<CR>
-nnoremap zur :vsc ReSharper.ReSharper_UnitTestRunContext<CR>
+nnoremap zut :vsc ReSharper.ReSharper_UnitTestRunContext<CR>
+nnoremap zuT :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
+" Too dangerous nnoremap zua :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
 nnoremap zuu :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
+nnoremap zul :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
+
+nnoremap zug Resharper.ReSharper_JumpToTestFile<CR>
 
 
 " Code
-nnoremap <silent>]<Space> :set paste<CR>m`o<Esc>``:set nopaste<CR>
-nnoremap <silent>[<Space> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+nnoremap ]<Space> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap [<Space> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
-vnoremap Cc :vsc Edit.CommentSelection<CR>
-vnoremap Cu :vsc Edit.UnommentSelection<CR>
+vnoremap cc :vsc Edit.CommentSelection<CR>
+vnoremap cu :vsc Edit.UncommentSelection<CR>
