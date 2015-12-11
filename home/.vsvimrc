@@ -64,5 +64,7 @@ nnoremap zug Resharper.ReSharper_JumpToTestFile<CR>
 nnoremap ]<Space> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap [<Space> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
-vnoremap cc :vsc Edit.CommentSelection<CR>
-vnoremap cu :vsc Edit.UncommentSelection<CR>
+nnoremap Cc :vsc Edit.CommentSelection<CR>
+vnoremap Cc :vsc Edit.CommentSelection<CR>
+nnoremap Cu :vsc Edit.UncommentSelection<CR>
+vnoremap Cu :vsc Edit.UncommentSelection<CR>
