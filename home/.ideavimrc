@@ -1,0 +1,54 @@
+set autoindent
+
+
+" Refactors
+nnoremap crr :action RenameElement<CR>
+nnoremap cro :action Move<CR>
+nnoremap crd :action SafeDelete<CR>
+vnoremap crm :action ExtractMethod<CR>
+vnoremap crv :action IntroduceVariable<CR>
+nnoremap crf :action IntroduceField<CR>
+nnoremap crp :action IntroduceParameter<CR>
+nnoremap cri :action Inline<CR>
+nnoremap crs :action ChangeSignature<CR>
+nnoremap crc :action ReformatCode<CR>
+
+" Explore
+nnoremap g] :action GotoDeclaration<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gk :action TypeHierarchy<CR>
+nnoremap gj :action TypeHierarchy<CR>
+
+nnoremap gr :action ShowUsages<CR>
+
+nnoremap ]q :action NextOccurence
+nnoremap [q :action PreviousOccurence<CR>
+nnoremap ]e :action GotoNextError<CR>
+nnoremap [e :action GotoPreviousError<CR>
+nnoremap ]h :action GotoNextError<CR>
+nnoremap [h :action GotoPreviousError<CR>
+nnoremap ]m :action MethodDown<CR>
+nnoremap [m :action MethodUp<CR>
+
+"nnoremap g[ :action GotoContainingDeclaration<CR>
+
+nnoremap gt :action GotoClass<CR>
+nnoremap gf :action GotoFile<CR>
+nnoremap gs :action GotoSymbol<CR>
+nnoremap gm :action FileStructurePopup<CR>
+
+
+" Tests
+"nnoremap zud :action UnitTestDebugContext<CR>
+"nnoremap zur :action UnitTestRunContext<CR>
+"nnoremap zuu :action UnitTestSessionRepeatPreviousRun<CR>
+
+
+" Code
+nnoremap <silent> ]<Space> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent> [<Space> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
+vnoremap Cc :action CommentByLineComment<CR>
+vnoremap Cm :action CommentByBlockComment<CR>
+vnoremap Ci :action CommentByLineComment<CR>
+"vnoremap Cu :action Edit.UncommentSelection<CR>
