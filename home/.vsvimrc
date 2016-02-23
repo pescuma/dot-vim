@@ -18,14 +18,18 @@ nnoremap crp :vsc ReSharper.ReSharper_IntroParameter<CR>
 nnoremap cri :vsc ReSharper.ReSharper_InlineVariable<CR>
 nnoremap crs :vsc ReSharper.ReSharper_ChangeSignature<CR>
 nnoremap crc :vsc ReSharper_SilentCleanupCode<CR>
+vnoremap crc :vsc ReSharper_SilentCleanupCode<CR>
 
 " Explore
+nnoremap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+nnoremap g[ :vsc ReSharper.ReSharper_GotoContainingDeclaration<CR>
 nnoremap g] :vsc ReSharper.ReSharper_GotoDeclaration<CR>
 nnoremap gi :vsc ReSharper.ReSharper_GotoImplementation<CR>
 nnoremap gk :vsc ReSharper.ReSharper_GotoBase<CR>
 nnoremap gj :vsc ReSharper.ReSharper_GotoInheritors<CR>
 
 nnoremap gr :vsc ReSharper.ReSharper_GotoUsage<CR>
+nnoremap ga :vsc ReSharper.ReSharper_GotoRelatedFiles<CR>
 
 nnoremap ]q :vsc ReSharper.ReSharper_ResultListGoToNextLocation<CR>
 nnoremap [q :vsc ReSharper.ReSharper_ResultListGoToPrevLocation<CR>
@@ -41,7 +45,6 @@ nnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 vnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 
 
-nnoremap g[ :vsc ReSharper.ReSharper_GotoContainingDeclaration<CR>
 
 nnoremap gt :vsc ReSharper.ReSharper_GotoType<CR>
 nnoremap gf :vsc ReSharper.ReSharper_GotoFile<CR>
