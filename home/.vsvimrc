@@ -1,5 +1,6 @@
 set vsvim_useeditordefaults
 set autoindent
+set smartcase
 
 
 nnoremap <C-O> :vsc ReSharper.ReSharper_NavigateBackward<CR>
@@ -17,8 +18,8 @@ nnoremap crf :vsc ReSharper.ReSharper_IntroduceField<CR>
 nnoremap crp :vsc ReSharper.ReSharper_IntroParameter<CR>
 nnoremap cri :vsc ReSharper.ReSharper_InlineVariable<CR>
 nnoremap crs :vsc ReSharper.ReSharper_ChangeSignature<CR>
-nnoremap crc :vsc ReSharper_SilentCleanupCode<CR>
-vnoremap crc :vsc ReSharper_SilentCleanupCode<CR>
+nnoremap crc :vsc ReSharper.ReSharper_SilentCleanupCode<CR>
+vnoremap crc :vsc ReSharper.ReSharper_SilentCleanupCode<CR>
 
 " Explore
 nnoremap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
