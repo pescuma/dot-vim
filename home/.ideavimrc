@@ -1,17 +1,24 @@
 set autoindent
+set surround
 
 
 " Refactors
 nnoremap crr :action RenameElement<CR>
 nnoremap cro :action Move<CR>
 nnoremap crd :action SafeDelete<CR>
+nnoremap crm :action ExtractMethod<CR>
 vnoremap crm :action ExtractMethod<CR>
+nnoremap crv :action IntroduceVariable<CR>
 vnoremap crv :action IntroduceVariable<CR>
 nnoremap crf :action IntroduceField<CR>
 nnoremap crp :action IntroduceParameter<CR>
 nnoremap cri :action Inline<CR>
 nnoremap crs :action ChangeSignature<CR>
 nnoremap crc :action ReformatCode<CR>
+
+nnoremap <A-j> :action MoveLineDown<CR>
+nnoremap <A-k> :action MoveLineUp<CR>
+
 
 " Explore
 nnoremap g] :action GotoDeclaration<CR>
@@ -49,6 +56,6 @@ nnoremap <silent> ]<Space> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <silent> [<Space> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 vnoremap Cc :action CommentByLineComment<CR>
-vnoremap Cm :action CommentByBlockComment<CR>
-vnoremap Ci :action CommentByLineComment<CR>
+"vnoremap Cm :action CommentByBlockComment<CR>
+"vnoremap Ci :action CommentByLineComment<CR>
 "vnoremap Cu :action Edit.UncommentSelection<CR>
