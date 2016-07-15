@@ -1,5 +1,8 @@
 set autoindent
+set smartcase
+set visualbell
 set surround
+set digraph
 
 
 " Refactors
@@ -15,29 +18,36 @@ nnoremap crp :action IntroduceParameter<CR>
 nnoremap cri :action Inline<CR>
 nnoremap crs :action ChangeSignature<CR>
 nnoremap crc :action ReformatCode<CR>
+vnoremap crc :action ReformatCode<CR>
 
 nnoremap <A-j> :action MoveLineDown<CR>
 nnoremap <A-k> :action MoveLineUp<CR>
 
 
 " Explore
+nnoremap gd :action GotoDeclaration<CR>
+"nnoremap g[ :action GotoContainingDeclaration<CR>
 nnoremap g] :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gk :action TypeHierarchy<CR>
 nnoremap gj :action TypeHierarchy<CR>
 
 nnoremap gr :action ShowUsages<CR>
+"nnoremap ga :vsc ReSharper.ReSharper_GotoRelatedFiles<CR>
 
 nnoremap ]q :action NextOccurence
 nnoremap [q :action PreviousOccurence<CR>
 nnoremap ]e :action GotoNextError<CR>
 nnoremap [e :action GotoPreviousError<CR>
+"nnoremap ]E :action View.NextError<CR>
+"nnoremap [E :action View.PreviousError<CR>
 nnoremap ]h :action GotoNextError<CR>
 nnoremap [h :action GotoPreviousError<CR>
 nnoremap ]m :action MethodDown<CR>
+vnoremap ]m :action MethodDown<CR>
 nnoremap [m :action MethodUp<CR>
+vnoremap [m :action MethodUp<CR>
 
-"nnoremap g[ :action GotoContainingDeclaration<CR>
 
 nnoremap gt :action GotoClass<CR>
 nnoremap gf :action GotoFile<CR>
@@ -47,6 +57,9 @@ nnoremap gm :action FileStructurePopup<CR>
 
 " Tests
 "nnoremap zud :action UnitTestDebugContext<CR>
+"nnoremap zut :action ReSharper.ReSharper_UnitTestRunContext<CR>
+"nnoremap zuT :action ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
+" Too dangerous nnoremap zua :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
 "nnoremap zur :action UnitTestRunContext<CR>
 "nnoremap zuu :action UnitTestSessionRepeatPreviousRun<CR>
 
@@ -55,7 +68,9 @@ nnoremap gm :action FileStructurePopup<CR>
 nnoremap <silent> ]<Space> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <silent> [<Space> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
+nnoremap Cc :action CommentByLineComment<CR>
 vnoremap Cc :action CommentByLineComment<CR>
 "vnoremap Cm :action CommentByBlockComment<CR>
 "vnoremap Ci :action CommentByLineComment<CR>
+"vnoremap Cu :action Edit.UncommentSelection<CR>
 "vnoremap Cu :action Edit.UncommentSelection<CR>

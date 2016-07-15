@@ -1,6 +1,7 @@
 set vsvim_useeditordefaults
 set autoindent
 set smartcase
+set visualbell
 
 
 nnoremap <C-O> :vsc ReSharper.ReSharper_NavigateBackward<CR>
@@ -34,17 +35,16 @@ nnoremap ga :vsc ReSharper.ReSharper_GotoRelatedFiles<CR>
 
 nnoremap ]q :vsc ReSharper.ReSharper_ResultListGoToNextLocation<CR>
 nnoremap [q :vsc ReSharper.ReSharper_ResultListGoToPrevLocation<CR>
-nnoremap ]e :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
-nnoremap [e :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
-nnoremap ]E :vsc View.NextError<CR>
-nnoremap [E :vsc View.PreviousError<CR>
+nnoremap ]E :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
+nnoremap [E :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
+nnoremap ]e :vsc View.NextError<CR>
+nnoremap [e :vsc View.PreviousError<CR>
 nnoremap ]h :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
 nnoremap [h :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
 nnoremap ]m :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 vnoremap ]m :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 nnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 vnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
-
 
 
 nnoremap gt :vsc ReSharper.ReSharper_GotoType<CR>
