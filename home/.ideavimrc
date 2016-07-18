@@ -2,7 +2,6 @@ set autoindent
 set smartcase
 set visualbell
 set surround
-set digraph
 
 
 " Refactors
@@ -65,8 +64,8 @@ nnoremap gm :action FileStructurePopup<CR>
 
 
 " Code
-nnoremap <silent> ]<Space> :set paste<CR>m`o<Esc>``:set nopaste<CR>
-nnoremap <silent> [<Space> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+nnoremap <silent> ]<Space> :set paste<CR>mmo<Esc>`m:set nopaste<CR>
+nnoremap <silent> [<Space> :set paste<CR>mmO<Esc>`m:set nopaste<CR>
 
 nnoremap Cc :action CommentByLineComment<CR>
 vnoremap Cc :action CommentByLineComment<CR>
