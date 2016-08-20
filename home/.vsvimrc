@@ -1,5 +1,6 @@
 set vsvim_useeditordefaults
 set autoindent
+set ignorecase
 set smartcase
 set visualbell
 

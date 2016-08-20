@@ -1,8 +1,12 @@
 set autoindent
+set ignorecase
 set smartcase
 set visualbell
 set surround
 
+
+noremap <C-o> :action Back<CR>
+noremap <C-i> :action Forward<CR>
 
 " Refactors
 nnoremap crr :action RenameElement<CR>
