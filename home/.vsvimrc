@@ -3,6 +3,7 @@ set autoindent
 set ignorecase
 set smartcase
 set visualbell
+set hls
 
 
 nnoremap <C-O> :vsc ReSharper.ReSharper_NavigateBackward<CR>

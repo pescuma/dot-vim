@@ -2,6 +2,7 @@ set autoindent
 set ignorecase
 set smartcase
 set visualbell
+set hls
 set surround
 
 
@@ -38,7 +39,7 @@ nnoremap gj :action TypeHierarchy<CR>
 nnoremap gr :action ShowUsages<CR>
 "nnoremap ga :vsc ReSharper.ReSharper_GotoRelatedFiles<CR>
 
-nnoremap ]q :action NextOccurence
+nnoremap ]q :action NextOccurence<CR>
 nnoremap [q :action PreviousOccurence<CR>
 nnoremap ]e :action GotoNextError<CR>
 nnoremap [e :action GotoPreviousError<CR>
