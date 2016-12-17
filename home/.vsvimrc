@@ -53,7 +53,13 @@ nnoremap gt :vsc ReSharper.ReSharper_GotoType<CR>
 nnoremap gf :vsc ReSharper.ReSharper_GotoFile<CR>
 nnoremap gs :vsc ReSharper.ReSharper_GotoSymbol<CR>
 nnoremap gm :vsc ReSharper.ReSharper_GotoFileMember<CR>
+nnoremap gx :vsc ReSharper.ReSharper_GotoText<CR>
 
+
+" Build
+
+nnoremap zrb :vsc Build.BuildSolution<CR>
+nnoremap zrr :vsc Build.RebuildSolution<CR>
 
 " Tests
 nnoremap zud :vsc ReSharper.ReSharper_UnitTestDebugContext<CR>
