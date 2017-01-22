@@ -47,10 +47,10 @@ nnoremap [e :action GotoPreviousError<CR>
 "nnoremap [E :action View.PreviousError<CR>
 nnoremap ]h :action GotoNextError<CR>
 nnoremap [h :action GotoPreviousError<CR>
-nnoremap ]m :action MethodDown<CR>
-vnoremap ]m :action MethodDown<CR>
-nnoremap [m :action MethodUp<CR>
-vnoremap [m :action MethodUp<CR>
+nnoremap ]m :action MethodDown<CR>zt
+vnoremap ]m :action MethodDown<CR>zt
+nnoremap [m :action MethodUp<CR>zt
+vnoremap [m :action MethodUp<CR>zt
 
 
 nnoremap gt :action GotoClass<CR>
