@@ -69,7 +69,7 @@ nnoremap zuT :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 nnoremap zuu :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
 nnoremap zul :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
 
-nnoremap zug Resharper.ReSharper_JumpToTestFile<CR>
+nnoremap gzu :vsc Resharper.ReSharper_JumpToTestFile<CR>
 
 
 " Code
