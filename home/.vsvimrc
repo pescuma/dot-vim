@@ -1,10 +1,14 @@
 set vsvim_useeditordefaults
+
 set autoindent
 set ignorecase
 set smartcase
 set visualbell
 set hls
+"set surround
 
+
+inoremap jk <esc>
 
 nnoremap <C-O> :vsc ReSharper.ReSharper_NavigateBackward<CR>
 nnoremap <C-I> :vsc ReSharper.ReSharper_NavigateForward<CR>
@@ -58,8 +62,8 @@ nnoremap gx :vsc ReSharper.ReSharper_GotoText<CR>
 
 " Build
 
-nnoremap zrb :vsc Build.BuildSolution<CR>
-nnoremap zrr :vsc Build.RebuildSolution<CR>
+nnoremap zxb :vsc Build.BuildSolution<CR>
+nnoremap zxr :vsc Build.RebuildSolution<CR>
 
 " Tests
 nnoremap zud :vsc ReSharper.ReSharper_UnitTestDebugContext<CR>

@@ -6,6 +6,8 @@ set hls
 set surround
 
 
+inoremap jk <esc>
+
 noremap <C-o> :action Back<CR>
 noremap <C-i> :action Forward<CR>
 
