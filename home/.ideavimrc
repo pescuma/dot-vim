@@ -7,6 +7,8 @@ set surround
 
 
 inoremap jk <esc>
+noremap H _
+noremap L $
 
 noremap <C-o> :action Back<CR>
 noremap <C-i> :action Forward<CR>

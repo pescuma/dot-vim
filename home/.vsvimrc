@@ -9,6 +9,8 @@ set hls
 
 
 inoremap jk <esc>
+noremap H _
+noremap L $
 
 nnoremap <C-O> :vsc ReSharper.ReSharper_NavigateBackward<CR>
 nnoremap <C-I> :vsc ReSharper.ReSharper_NavigateForward<CR>
