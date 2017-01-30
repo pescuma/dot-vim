@@ -49,10 +49,10 @@ nnoremap ]E :vsc View.NextError<CR>
 nnoremap [E :vsc View.PreviousError<CR>
 nnoremap ]h :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
 nnoremap [h :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
-nnoremap ]m :vsc ReSharper.ReSharper_GotoNextMethod<CR>zt
-vnoremap ]m :vsc ReSharper.ReSharper_GotoNextMethod<CR>zt
-nnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>zt
-vnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>zt
+nnoremap ]m :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+vnoremap ]m :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+nnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+vnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 
 
 nnoremap gt :vsc ReSharper.ReSharper_GotoType<CR>
