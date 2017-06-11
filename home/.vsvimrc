@@ -69,7 +69,7 @@ nnoremap zxr :vsc Build.RebuildSolution<CR>
 
 " Tests
 nnoremap zud :vsc ReSharper.ReSharper_UnitTestDebugContext<CR>
-nnoremap zut :vsc ReSharper.ReSharper_UnitTestRunContext<CR>
+nnoremap zut :vsc ReSharper.ReSharper_UnitTestRunFromContext<CR>
 nnoremap zuT :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 " Too dangerous nnoremap zua :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
 nnoremap zuu :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
