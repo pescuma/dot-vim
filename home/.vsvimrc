@@ -19,8 +19,6 @@ nnoremap <C-I> :vsc ReSharper.ReSharper_NavigateForward<CR>
 nnoremap crr :vsc ReSharper.ReSharper_Rename<CR>
 nnoremap cro :vsc ReSharper.ReSharper_Move<CR>
 nnoremap crd :vsc ReSharper.ReSharper_SafeDelete<CR>
-nnoremap crm :vsc ReSharper.ReSharper_ExtractMethod<CR>
-vnoremap crm :vsc ReSharper.ReSharper_ExtractMethod<CR>
 nnoremap crv :vsc ReSharper.ReSharper_IntroVariable<CR>
 vnoremap crv :vsc ReSharper.ReSharper_IntroVariable<CR>
 nnoremap crf :vsc ReSharper.ReSharper_IntroduceField<CR>
@@ -29,6 +27,10 @@ nnoremap cri :vsc ReSharper.ReSharper_InlineVariable<CR>
 nnoremap crs :vsc ReSharper.ReSharper_ChangeSignature<CR>
 nnoremap crc :vsc ReSharper.ReSharper_SilentCleanupCode<CR>
 vnoremap crc :vsc ReSharper.ReSharper_SilentCleanupCode<CR>
+nnoremap crem :vsc ReSharper.ReSharper_ExtractMethod<CR>
+vnoremap crem :vsc ReSharper.ReSharper_ExtractMethod<CR>
+nnoremap crei :vsc ReSharper.ReSharper_ExtractInterface<CR>
+vnoremap crei :vsc ReSharper.ReSharper_ExtractInterface<CR>
 
 " Explore
 nnoremap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
