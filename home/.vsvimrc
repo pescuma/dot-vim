@@ -12,8 +12,12 @@ inoremap jk <esc>
 noremap H _
 noremap L $
 
-nnoremap <C-O> :vsc ReSharper.ReSharper_NavigateBackward<CR>
-nnoremap <C-I> :vsc ReSharper.ReSharper_NavigateForward<CR>
+cmap wa<CR> :vsc File.SaveAll<CR>
+
+"nnoremap <C-O> :vsc ReSharper.ReSharper_NavigateBackward<CR>
+"nnoremap <C-I> :vsc ReSharper.ReSharper_NavigateForward<CR>
+nnoremap <C-O> :vsc View.NavigateBackward<CR>
+nnoremap <C-I> :vsc View.NavigateForward<CR>
 
 " Refactors
 nnoremap crr :vsc ReSharper.ReSharper_Rename<CR>
