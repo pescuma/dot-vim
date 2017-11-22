@@ -5,12 +5,14 @@ set ignorecase
 set smartcase
 set visualbell
 set hls
+set incsearch
 "set surround
 
 
 inoremap jk <esc>
 noremap H _
 noremap L $
+noremap Q @q
 
 cmap wa<CR> :vsc File.SaveAll<CR>
 
@@ -89,6 +91,6 @@ nnoremap ]<Space> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap [<Space> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 nnoremap Cc :vsc Edit.CommentSelection<CR>
-vnoremap Cc :vsc Edit.CommentSelection<CR>
+vnoremap Cc :vsc Edit.CommentSelection<CR><Esc><Esc>
 nnoremap Cu :vsc Edit.UncommentSelection<CR>
-vnoremap Cu :vsc Edit.UncommentSelection<CR>
+vnoremap Cu :vsc Edit.UncommentSelection<CR><Esc><Esc>

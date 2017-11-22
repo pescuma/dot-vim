@@ -3,12 +3,14 @@ set ignorecase
 set smartcase
 set visualbell
 set hls
+set incsearch
 set surround
 
 
 inoremap jk <esc>
 noremap H _
 noremap L $
+noremap Q @q
 
 noremap <C-o> :action Back<CR>
 noremap <C-i> :action Forward<CR>
