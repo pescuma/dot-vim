@@ -28,13 +28,17 @@ nnoremap crd :vsc ReSharper.ReSharper_SafeDelete<CR>
 nnoremap crv :vsc ReSharper.ReSharper_IntroVariable<CR>
 vnoremap crv :vsc ReSharper.ReSharper_IntroVariable<CR>
 nnoremap crf :vsc ReSharper.ReSharper_IntroduceField<CR>
+vnoremap crf :vsc ReSharper.ReSharper_IntroduceField<CR>
 nnoremap crp :vsc ReSharper.ReSharper_IntroParameter<CR>
+vnoremap crp :vsc ReSharper.ReSharper_IntroParameter<CR>
 nnoremap cri :vsc ReSharper.ReSharper_InlineVariable<CR>
+vnoremap cri :vsc ReSharper.ReSharper_InlineVariable<CR>
 nnoremap crs :vsc ReSharper.ReSharper_ChangeSignature<CR>
+vnoremap crs :vsc ReSharper.ReSharper_ChangeSignature<CR>
 nnoremap crc :vsc ReSharper.ReSharper_SilentCleanupCode<CR>
 vnoremap crc :vsc ReSharper.ReSharper_SilentCleanupCode<CR>
-nnoremap crem :vsc ReSharper.ReSharper_ExtractMethod<CR>
-vnoremap crem :vsc ReSharper.ReSharper_ExtractMethod<CR>
+nnoremap crm :vsc ReSharper.ReSharper_ExtractMethod<CR>
+vnoremap crm :vsc ReSharper.ReSharper_ExtractMethod<CR>
 nnoremap crei :vsc ReSharper.ReSharper_ExtractInterface<CR>
 vnoremap crei :vsc ReSharper.ReSharper_ExtractInterface<CR>
 
@@ -46,7 +50,7 @@ nnoremap gi :vsc ReSharper.ReSharper_GotoImplementation<CR>
 nnoremap gk :vsc ReSharper.ReSharper_GotoBase<CR>
 nnoremap gj :vsc ReSharper.ReSharper_GotoInheritors<CR>
 
-nnoremap gr :vsc ReSharper.ReSharper_GotoUsage<CR>
+nnoremap gr :vsc ReSharper.ReSharper_ShowUsages<CR>
 nnoremap ga :vsc ReSharper.ReSharper_GotoRelatedFiles<CR>
 
 nnoremap ]q :vsc ReSharper.ReSharper_ResultListGoToNextLocation<CR>
@@ -57,10 +61,10 @@ nnoremap ]E :vsc View.NextError<CR>
 nnoremap [E :vsc View.PreviousError<CR>
 nnoremap ]h :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
 nnoremap [h :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
-nnoremap ]m :vsc ReSharper.ReSharper_GotoNextMethod<CR>
-vnoremap ]m :vsc ReSharper.ReSharper_GotoNextMethod<CR>
-nnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
-vnoremap [m :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+nnoremap ]m :vsc ReSharper.ReSharper_GotoNextMember<CR>
+vnoremap ]m :vsc ReSharper.ReSharper_GotoNextMember<CR>
+nnoremap [m :vsc ReSharper.ReSharper_GotoPrevMember<CR>
+vnoremap [m :vsc ReSharper.ReSharper_GotoPrevMember<CR>
 
 
 nnoremap gt :vsc ReSharper.ReSharper_GotoType<CR>
@@ -71,9 +75,13 @@ nnoremap gx :vsc ReSharper.ReSharper_GotoText<CR>
 
 
 " Build
-
 nnoremap zxb :vsc Build.BuildSolution<CR>
 nnoremap zxr :vsc Build.RebuildSolution<CR>
+
+" Run
+nnoremap zrd :vsc Debug.Start<CR>
+nnoremap zrr :vsc Debug.StartWithoutDebugging<CR>
+nnoremap zra :vsc Debug.ReAttach<CR>
 
 " Tests
 nnoremap zud :vsc ReSharper.ReSharper_UnitTestDebugContext<CR>

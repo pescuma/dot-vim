@@ -6,6 +6,8 @@ set hls
 set incsearch
 "set surround
 
+set langmenu=en_US.UTF-8    " sets the language of the menu (gvim)
+"language en                 " sets the language of the messages / ui (vim)
 
 inoremap jk <esc>
 noremap H _
