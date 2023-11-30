@@ -12,75 +12,118 @@ noremap H _
 noremap L $
 noremap Q @q
 
-noremap <C-o> :action Back<CR>
-noremap <C-i> :action Forward<CR>
+nmap <C-s> :wa<CR>
+imap <C-s> <Esc>:wa<CR>a
+vmap <C-s> <Esc>:wa<CR>gv
+
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
+
+map <C-w>h <Action>(HideAllWindows)
 
 " Refactors
-nnoremap crr :action RenameElement<CR>
-nnoremap cro :action Move<CR>
-nnoremap crd :action SafeDelete<CR>
-nnoremap crm :action ExtractMethod<CR>
-vnoremap crm :action ExtractMethod<CR>
-nnoremap crv :action IntroduceVariable<CR>
-vnoremap crv :action IntroduceVariable<CR>
-nnoremap crf :action IntroduceField<CR>
-nnoremap crp :action IntroduceParameter<CR>
-nnoremap cri :action Inline<CR>
-nnoremap crs :action ChangeSignature<CR>
-nnoremap crc :action ReformatCode<CR>
-vnoremap crc :action ReformatCode<CR>
+nmap crr <Action>(RenameElement)
+nmap cro <Action>(Move)
+nmap crd <Action>(SafeDelete)
+nmap crm <Action>(ExtractMethod)
+vmap crm <Action>(ExtractMethod)
+nmap crv <Action>(IntroduceVariable)
+vmap crv <Action>(IntroduceVariable)
+nmap crf <Action>(IntroduceField)
+nmap crp <Action>(IntroduceParameter)
+nmap cri <Action>(Inline)
+nmap crs <Action>(ChangeSignature)
+nmap crc <Action>(ReformatCode)
+vmap crc <Action>(ReformatCode)
 
-nnoremap <A-j> :action MoveLineDown<CR>
-nnoremap <A-k> :action MoveLineUp<CR>
+nmap <A-j> <Action>(MoveLineDown)
+nmap <A-k> <Action>(MoveLineUp)
 
 
 " Explore
-nnoremap gd :action GotoDeclaration<CR>
-"nnoremap g[ :action GotoContainingDeclaration<CR>
-nnoremap g] :action GotoDeclaration<CR>
-nnoremap gi :action GotoImplementation<CR>
-nnoremap gk :action TypeHierarchy<CR>
-nnoremap gj :action TypeHierarchy<CR>
+nmap gd <Action>(GotoDeclaration)
+"nmap g[ <Action>(GotoContainingDeclaration)
+nmap g] <Action>(GotoDeclaration)
+nmap gi <Action>(ReSharperGotoImplementation)
+nmap gk <Action>(GotoSuperMethod)
+nmap gj <Action>(GotoImplementation)
+nmap gp <Action>(QuickJavaDoc)
 
-nnoremap gr :action ShowUsages<CR>
-"nnoremap ga :vsc ReSharper.ReSharper_GotoRelatedFiles<CR>
+nmap gr <Action>(ShowUsages)
+nmap gs <Action>(GotoRelated)
 
-nnoremap ]q :action NextOccurence<CR>
-nnoremap [q :action PreviousOccurence<CR>
-nnoremap ]e :action GotoNextError<CR>
-nnoremap [e :action GotoPreviousError<CR>
-"nnoremap ]E :action View.NextError<CR>
-"nnoremap [E :action View.PreviousError<CR>
-nnoremap ]h :action GotoNextError<CR>
-nnoremap [h :action GotoPreviousError<CR>
-nnoremap ]m :action MethodDown<CR>
-vnoremap ]m :action MethodDown<CR>
-nnoremap [m :action MethodUp<CR>
-vnoremap [m :action MethodUp<CR>
+nmap ]q <Action>(NextOccurence)
+nmap [q <Action>(PreviousOccurence)
+nmap ]e <Action>(GotoNextError)
+nmap [e <Action>(GotoPreviousError)
+nmap ]E <Action>(ReSharperGotoNextErrorInSolution)
+nmap [E <Action>(ReSharperGotoPrevErrorInSolution)
+nmap ]h <Action>(GotoNextError)
+nmap [h <Action>(GotoPreviousError)
+nmap ]m <Action>(MethodDown)
+vmap ]m <Action>(MethodDown)
+nmap [m <Action>(MethodUp)
+vmap [m <Action>(MethodUp)
 
 
-nnoremap gt :action GotoClass<CR>
-nnoremap gf :action GotoFile<CR>
-nnoremap gs :action GotoSymbol<CR>
-nnoremap gm :action FileStructurePopup<CR>
+nmap ga <Action>(SearchEverywhere)
+nmap gt <Action>(GotoClass)
+nmap gf <Action>(GotoFile)
+"nmap gs <Action>(GotoSymbol)
+nmap gm <Action>(FileStructurePopup)
 
+
+" Build
+if &ide =~? 'intellij idea'
+	map zxb <Action>(CompileDirty)
+	map zxr <Action>(CompileProject)
+else
+	map zxb <Action>(BuildWholeSolutionAction)
+	map zxr <Action>(RebuildSolutionAction)
+endif
+
+" Run
+map zrr <Action>(Run)
+"nmap zra :vsc Debug.ReAttach<CR>
+
+" Debug
+map zdr <Action>(Debug)
+map zdb <Action>(ToggleLineBreakpoint)
+map zdv <Action>(ViewBreakpoints)
+map <A-j> <Action>(StepOver)
+map <A-S-j> <Action>(RunToCursor)
+" map <A-k> <Action>(ResetFrame)
+map <A-l> <Action>(StepInto)
+map <A-h> <Action>(StepOut)
+map <C-j> <Action>(Resume)
+map zdc <Action>(Resume)
+map zds <Action>(Stop)
 
 " Tests
-"nnoremap zud :action UnitTestDebugContext<CR>
-"nnoremap zut :action ReSharper.ReSharper_UnitTestRunContext<CR>
-"nnoremap zuT :action ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
-" Too dangerous nnoremap zua :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
-"nnoremap zur :action UnitTestRunContext<CR>
-"nnoremap zuu :action UnitTestSessionRepeatPreviousRun<CR>
+if &ide =~? 'intellij idea'
+    nmap zur <Action>(RunClass)
+    nmap zud <Action>(DebugClass)
+    "nmap zut <Action>(RiderUnitTestRunCurrentSessionAction)
+    "nmap zuT <Action>(ReSharper.ReSharper_UnitTestRunCurrentSession)
+    " Too dangerous nmap zua :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
+    nmap zuu <Action>(Rerun)
+else
+    nmap zur <Action>(RiderUnitTestRunContextAction)
+    nmap zud <Action>(RiderUnitTestDebugContextAction)
+    nmap zut <Action>(RiderUnitTestRunCurrentSessionAction)
+    "nmap zuT <Action>(ReSharper.ReSharper_UnitTestRunCurrentSession)
+    " Too dangerous nmap zua :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
+    nmap zuu <Action>(RiderUnitTestRepeatPreviousRunAction)
+endif
 
 
 " Code
 nnoremap <silent> ]<Space> :set paste<CR>mmo<Esc>`m:set nopaste<CR>
 nnoremap <silent> [<Space> :set paste<CR>mmO<Esc>`m:set nopaste<CR>
 
-nnoremap Cc :action CommentByLineComment<CR>
-vnoremap Cc :action CommentByLineComment<CR>
-"vnoremap Cm :action CommentByBlockComment<CR>
-"vnoremap Ci :action CommentByLineComment<CR>
-"vnoremap Cu :action Edit.UncommentSelection<CR>
-"vnoremap Cu :action Edit.UncommentSelection<CR>
+nmap Cc <Action>(CommentByLineComment)
+vmap Cc <Action>(CommentByLineComment)
+"vmap Cm <Action>(CommentByBlockComment)
+"vmap Ci <Action>(CommentByLineComment)
+vmap Cu <Action>(CommentByLineComment)
+vmap Cu <Action>(CommentByLineComment)
